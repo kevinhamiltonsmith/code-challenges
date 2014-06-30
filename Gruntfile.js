@@ -28,6 +28,15 @@ module.exports = function(grunt) {
             files: ['tests/**/*.html']
         },
 
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: './',
+                    mainConfigFile: './src/main.js'
+                }
+            }
+        },
+
         watch: {
             files: ['<%= jshint.files %>'],
             tasks: ['jshint', 'qunit']
@@ -37,6 +46,7 @@ module.exports = function(grunt) {
     // Load all grunt plugins
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Run with "grunt test" on the command line
