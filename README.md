@@ -12,3 +12,6 @@ grunt test  # Run QUnint tests from the command line
 ```
 
 To use the QUnit in-browser UI, open tests/tests.html in your browser.
+
+## Credits
+Inspiration from Blake Embry: https://github.com/blakeembrey/code-problems
