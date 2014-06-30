@@ -1,6 +1,9 @@
-var reverseWords = require(['reverse-words']);
-console.log('inside the test!', reverseWords);
+require([
+    '../solutions/reverse-words.js'
+], function(reverseWords) {
+    var simple = reverseWords.reverseWord('This is a test!');
 
-QUnit.test('reverseWords test', function(assert) {
-    assert.ok( 1 == "1", "Passed!" );
+    test('Reverse Words', function() {
+        equal(simple, 'test! a is This', 'Function correctly reversed a simple string');
+    });
 });

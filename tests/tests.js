@@ -1,8 +1,8 @@
 require([
+    // Add new tests here
     '../tests/javascript/reverse-words.js'
-], function(reverseWords) {
-
-    QUnit.test( "MAIN TEST", function( assert ) {
-        assert.ok( 1 == "1", "Passed!" );
+], function() {
+    test('Testing Framework', function( assert ) {
+        ok( 1 == "1", "Testing framework correctly initialized" );
     });
 });
