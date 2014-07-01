@@ -1,6 +1,7 @@
 require([
     // Add new tests here
-    '../tests/javascript/reverse-words.js'
+    '../tests/javascript/reverse-words.js',
+    '../tests/javascript/who-likes-it.js'
 ], function() {
     module('Testing Framework Tests', {
         setup: function() {
