@@ -14,5 +14,5 @@ likes(['Alex', 'Jacob', 'Mark', 'Max']); // must return "Alex, Jacob and 2 other
 ```
 
 ## Credits
-Codewars: http://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/javascript
+Codewars: http://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/javascript   
 Codewars is amazing. If you haven't signed up for an account, go do it now.
