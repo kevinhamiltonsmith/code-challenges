@@ -16,5 +16,5 @@ largestDifference([9,4,1,10,3,4,0,-1,-2]) == 4); // data[1] <= data[5], so 5 - 1
 ```
 
 ## Credits
-Codewars: http://www.codewars.com/kata/52503c77e5b972f21600000e/train/javascript 
+Codewars: http://www.codewars.com/kata/52503c77e5b972f21600000e/train/javascript  
 Codewars is amazing. If you haven't signed up for an account, go do it now.
