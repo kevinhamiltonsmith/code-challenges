@@ -12,7 +12,7 @@ To add a new code challenge to this repo, first define the challenge in the prob
 
 For the solution, add it to the solutions folder, under the correct language sub-folder.
 
-### Javascript
+### Javascript Solutions
 All JS solutions should follow the [module definition pattern](http://requirejs.org/docs/api.html#define) using require.js.
 For testing purposes, it is best to return a method containing your solution function.
 ```javascript
@@ -26,7 +26,7 @@ define(function () {
 });
 ```
 
-## Javascript Testing
+### Javascript Testing
 JS unit testing is done with QUnit.
 
 To add a new unit test for your challenge solution, add a new js file to the tests folder, under the correct language subfolder.
