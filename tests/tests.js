@@ -1,5 +1,6 @@
 require([
     // Add new tests here
+    '../tests/javascript/reverse-linked-list.js',
     '../tests/javascript/reverse-words.js',
     '../tests/javascript/who-likes-it.js'
 ], function() {
