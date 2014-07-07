@@ -11,7 +11,9 @@ grunt test  # Run QUnint tests from the command line
 To add a new code challenge to this repo, first define the challenge in the problems folder. Create a new sub-folder with the challenge name, then add a descriptive README to that folder.
 
 For the solution, add it to the solutions folder, under the correct language sub-folder.
-All solutions should follow the [module definition pattern](http://requirejs.org/docs/api.html#define) using require.js.
+
+### Javascript
+All JS solutions should follow the [module definition pattern](http://requirejs.org/docs/api.html#define) using require.js.
 For testing purposes, it is best to return a method containing your solution function.
 ```javascript
 define(function () {
@@ -24,7 +26,7 @@ define(function () {
 });
 ```
 
-## Testing
+## Javascript Testing
 JS unit testing is done with QUnit.
 
 To add a new unit test for your challenge solution, add a new js file to the tests folder, under the correct language subfolder.
