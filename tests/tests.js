@@ -4,6 +4,7 @@ require([
     '../tests/javascript/longest-sequence.js',
     '../tests/javascript/reverse-linked-list.js',
     '../tests/javascript/reverse-words.js',
+    '../tests/javascript/sum-strings.js',
     '../tests/javascript/who-likes-it.js'
 ], function() {
     module('Testing Framework Tests', {
