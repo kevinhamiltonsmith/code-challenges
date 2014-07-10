@@ -1,6 +1,7 @@
 require([
     // Add new tests here
     '../tests/javascript/largest-difference-increasing.js',
+    '../tests/javascript/longest-sequence.js',
     '../tests/javascript/reverse-linked-list.js',
     '../tests/javascript/reverse-words.js',
     '../tests/javascript/who-likes-it.js'
