@@ -2,7 +2,7 @@ define([
     '../../solutions/javascript/check-balanced-parentheses.js'
 ],
 function(checkBalanced) {
-    module('Check if Parentheses are Balanced', {
+    module('Check if Balanced Tests', {
         teardown: function() {
             document.getElementById('qunit-fixture').innerHTML = '';
         }
