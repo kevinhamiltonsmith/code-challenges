@@ -2,45 +2,62 @@ define(function () {
     return {
         spiralSort: function(array) {
             var len = array.length,
-                bottomBound = len,
+                bounds = {
+                    xMin: 0,
+                    yMin: 0,
+                    xMax: len -1,
+                    yMax: len -1
+                },
                 col = 0,
-                leftBound = 0,
-                rightBound = len,
                 row = 0,
-                sorted = [],
-                topBound = 0;
+                direction = 'right',
+                sorted = [];
 
-            for (var i = 0; i < len-i; i++) {
-                while (col < rightBound) {
-                    if (array[row][col]) {
-                        sorted.push(array[row][col]);
-                    }
-                    col++;
-                }
-                col--;
-                row++;
-                while (row < bottomBound) {
+            for (var i = 0; i < len*len; i++) {
+                if (array[row][col]) {
                     sorted.push(array[row][col]);
-                    row++;
                 }
-                col--;
-                row--;
-                bottomBound--;
-                while (col >= leftBound) {
-                    sorted.push(array[row][col]);
-                    col--;
+
+                // Directional cases
+                switch(direction) {
+                    case 'right':
+                        if (col == bounds.xMax) {
+                            direction = 'down';
+                            row++;
+                            bounds.xMax--;
+                            bounds.yMin++;
+                        } else {
+                            col++;
+                        }
+                        break;
+                    case 'down':
+                        if (row == bounds.yMax) {
+                            direction = 'left';
+                            col--;
+                            bounds.yMax--;
+                        } else {
+                            row++;
+                        }
+                        break;
+                    case 'left':
+                        if (col == bounds.xMin) {
+                            direction = 'up';
+                            row--;
+                            bounds.xMin++;
+                        } else {
+                            col--;
+                        }
+                        break;
+                    case 'up':
+                        if (row == bounds.yMin) {
+                            direction = 'right';
+                            col++;
+                            bounds.yMin++;
+                        } else {
+                            row--;
+                        }
+                        break;
                 }
-                row--;
-                col++;
-                leftBound++;
-                topBound++;
-                while (row >= topBound) {
-                    sorted.push(array[row][col]);
-                    row--;
-                }
-                row++;
-                col++;
-                rightBound--;
             }
             return sorted;
         }
