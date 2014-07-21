@@ -1,6 +1,7 @@
 require([
     // Add new tests here
     '../tests/javascript/check-balanced-parentheses.js',
+    '../tests/javascript/is-anagram.js',
     '../tests/javascript/largest-difference-increasing.js',
     '../tests/javascript/longest-sequence.js',
     '../tests/javascript/reverse-linked-list.js',
