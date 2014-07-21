@@ -10,9 +10,18 @@ function(asyncClosure) {
 
     asyncTest('Check if the closure is correctly handled', function() {
         asyncClosure.asyncClosure();
-        
+
         $.subscribe('startAsyncClosureTest', function(sub, iTest) {
-            deepEqual(iTest, [0,1,2,3,4], 'Immediately detects differences in word lengths');
+            deepEqual(iTest, [0,1,2,3,4], 'Correctly outputs array using anonymous closure function');
+            start();
+        });
+    });
+
+    asyncTest('Check if the closure is correctly handled with bind approach', function() {
+        asyncClosure.asyncClosureBind();
+
+        $.subscribe('startAsyncClosureTest2', function(sub, iTest2) {
+            deepEqual(iTest2, [0,1,2,3,4], 'Correctly outputs array using bind method');
             start();
         });
     });
