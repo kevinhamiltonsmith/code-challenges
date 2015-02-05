@@ -23,6 +23,7 @@ define(function () {
         },
 
         bestProfitOptimized: function(stockPrices) {
+            // This optimized solution only runs throught the stockPrices array, so it is O(n) time.
             var bestProfit = 0,
                 currentPrice,
                 minPrice = stockPrices[0];
