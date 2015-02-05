@@ -1,6 +1,8 @@
 define(function () {
     return {
         bestProfitBruteForce: function(stockPrices) {
+            // This solution is the worst performing, but it correctly solves the problem.
+            // Will take O(n^2) time.
             var bestProfit = 0,
                 currentPrice,
                 profit = 0;
@@ -15,7 +17,27 @@ define(function () {
                     if (profit > bestProfit) {
                         bestProfit = profit;
                     }
-                    console.log('bestProfit:', bestProfit);
+                }
+            }
+            return bestProfit;
+        },
+
+        bestProfitOptimized: function(stockPrices) {
+            var bestProfit = 0,
+                currentPrice,
+                minPrice = stockPrices[0];
+
+            for (var i = 1; i < stockPrices.length; i++) {
+                // Get current price
+                currentPrice = stockPrices[i];
+
+                // Check if current price is the lowest possible price
+                if (currentPrice < minPrice) {
+                    minPrice = currentPrice;
+                }
+
+                if ((currentPrice - minPrice) > bestProfit) {
+                    bestProfit = currentPrice - minPrice;
                 }
             }
             return bestProfit;

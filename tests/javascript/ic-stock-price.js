@@ -32,8 +32,10 @@ function(bestProfit) {
 
     // var test1 = bestProfit.bestProfitBruteForce(buildStockPriceArray(200, 300, 30, 50, 140, 190, 240));
     var test1 = bestProfit.bestProfitBruteForce(buildStockPriceArray(200, 60, 7, 18, 33, 35, 48, 58));
+    var test2 = bestProfit.bestProfitOptimized(buildStockPriceArray(200, 60, 7, 18, 33, 35, 48, 58));
 
     test('Check For Maximum Profit', function() {
         equal(test1, 102, 'Correctly found the max profit using brute force');
+        equal(test2, 102, 'Correctly found the max profit using greedy solution');
     });
 });
