@@ -3,6 +3,7 @@ require([
     '../tests/javascript/async-closure.js',
     '../tests/javascript/check-balanced-parentheses.js',
     '../tests/javascript/ic-highest-product-of-3.js',
+    '../tests/javascript/ic-merging-ranges.js',
     '../tests/javascript/ic-product-of-other-numbers.js',
     '../tests/javascript/ic-stock-price.js',
     '../tests/javascript/is-anagram.js',
